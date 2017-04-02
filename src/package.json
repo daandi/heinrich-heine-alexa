@@ -1,0 +1,30 @@
+{
+  "name": "heinrich-heine",
+  "version": "1.0.0",
+  "description": "Zitate eines großen Denkers und Künstlers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "publish": "zip -r heinrich-heine.zip ./ && aws lambda update-function-code --function-name=heinrich-heine --zip-file=fileb://heinrich-heine.zip && rm -f heinrich-heine.zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/daandi/alexa-heinrich-heine.git"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Andreas Neumann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daandi/heinrich-heine-alexa/issues"
+  },
+  "homepage": "https://github.com/daandi/heinrich-heine-alexa#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
